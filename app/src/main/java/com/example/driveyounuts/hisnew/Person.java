@@ -5,6 +5,7 @@ package com.example.driveyounuts.hisnew;
  */
 
 public class Person {
+    //名字
   String NAME;
 
     public String getGender() {
