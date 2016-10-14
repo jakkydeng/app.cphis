@@ -25,7 +25,7 @@ public class hisConnection {
     
 
     
-    public static String url="jdbc:oracle:thin:@172.16.0.10:1521:orcl";
+    public static String url="jdbc:oracle:thin:@221.2.220.182/:1521:orcl";
    
 
 
