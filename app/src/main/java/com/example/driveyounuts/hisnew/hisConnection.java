@@ -25,8 +25,8 @@ public class hisConnection {
     
 
     
-    public static String url="jdbc:oracle:thin:@221.2.220.182/:1521:orcl";
-    //修改了外网的ip地址 181 为182 做github 测试使用
+    public static String url="jdbc:oracle:thin:@221.2.220.181/:1521:orcl";
+    //修改了外网的ip地址  便于手机直接测试使用
    
 
 
