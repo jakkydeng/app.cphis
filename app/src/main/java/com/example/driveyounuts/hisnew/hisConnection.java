@@ -25,43 +25,46 @@ public class hisConnection {
     
 
     
-    public static String url="jdbc:oracle:thin:@221.2.220.181/:1521:orcl";
-    //修改了外网的ip地址 181 为182 做github 测试使用
+
+    public static String url="jdbc:oracle:thin:@221.2.220.182:1521:orcl";
+
+
    
 
 
-     public static  String user="system";
-      public static  String password="oracle";
+    public static  String user="system";
+    public static  String password="oracle";
     public static Connection con;
     public static Statement stmt;
     public static ResultSet rs;
-    public static Boolean flag=true;
-    public static File f=new File("server");
-    public static Vector columnHeads = new Vector();
-    public static  Vector rows = new Vector();
+
+
 
 
     public static void main(String[] args) throws SQLException {
 
       
        }
-    public  static void connect() {    
-          
+    public  static String connect() {
+          String ex="";
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
             
         } catch (ClassNotFoundException e) {
-            System.out.println("数据库1错!");
+            System.out.println("连接数据库错误!");
+            ex="数据库异常"+e.toString();
         }
         // 建立连接
       try{ 
             con = DriverManager.getConnection(url,user,password);
             stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
-            System.out.println("数据库连接成功!"); 
+            //System.out.println("数据库连接成功!");
         } catch(SQLException e) {
-          System.out.println("数据库"+e.toString());
+          System.out.println("数据库异常"+e.toString());
+          ex="数据库异常"+e.toString();
+
       }
-           
+        return ex;
     }
     public static void close() throws SQLException{
     stmt.close();
@@ -87,7 +90,7 @@ public class hisConnection {
 
         return returnJason;
 
-    //"select 姓名 from  病人信息 where 在院=1"；
+
 
 
 
