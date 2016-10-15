@@ -1,11 +1,8 @@
 package com.example.driveyounuts.hisnew;
 
 import android.os.Bundle;
-
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
-
-
 import android.widget.GridView;
 
 import com.google.gson.Gson;
@@ -15,9 +12,11 @@ import org.json.JSONException;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
+/**
+ * main
+ */
 
 public class MainActivity extends AppCompatActivity {
 
